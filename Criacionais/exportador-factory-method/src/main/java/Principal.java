@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Executa a aplicação Exportador Factory Method.
+ * Classe principal que executa a aplicação Exportador Factory Method.
  * @author Wandé Yan Pereira Martins Leite
  */
 public class Principal {
