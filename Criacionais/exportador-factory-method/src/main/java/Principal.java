@@ -17,17 +17,17 @@ public class Principal {
         produtos.add(new Produto("Notebook", "Asus", "New age", 341, 4999.99));
         produtos.add(new Produto("Smartphone", "Samsung", "Galaxy S10", 214,1000.00));
 
-        ExportadorListaProduto exportadorPadrao = ExportadorListaProduto.newInstance();
+        var exportadorPadrao = ExportadorListaProduto.newInstance();
         System.out.println("Lista de Produtos em HTML\n");
         exportadorPadrao.addNewColuna(Principal::getPrecoComDesconto, "Preço com Desconto");
         System.out.println(exportadorPadrao.exportar(produtos));
 
-        ExportadorListaProduto exportadorMarkdown = ExportadorListaProduto.newInstance("md");
+        var exportadorMarkdown = ExportadorListaProduto.newInstance("md");
         System.out.println("Lista de Produtos em Markdown\n");
         exportadorMarkdown.addNewColuna(Principal::getPrecoComDesconto, "Preço com Desconto");
         System.out.println(exportadorMarkdown.exportar(produtos));
 
-        ExportadorListaProduto exportadorCSV = ExportadorListaProduto.newInstance("csv");
+        var exportadorCSV = ExportadorListaProduto.newInstance("csv");
         System.out.println("Lista de Produtos em comma-separated values (CSV)\n");
         exportadorCSV.addNewColuna(Principal::getPrecoComDesconto, "Preço com Desconto");
         System.out.println(exportadorCSV.exportar(produtos));
